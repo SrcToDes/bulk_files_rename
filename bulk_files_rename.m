@@ -10,10 +10,10 @@ for ii=1:length(str_nfiles)
     if ~isempty(strfind(str_nfiles(ii).name,'副本'))
         newname = erase(str_nfiles(ii).name,' - 副本');  % 删除匹配字符并替换原来的字符串
         newname(1)='2';
-        movefile(str_nfiles(ii).name,newname);   % 弃用eval方式，因不能用变量。
+        movefile(str_nfiles(ii).name,newname);   % 弃用eval方式，因不能采用变量作为其中的参数实现批量文件改名。
     end
 end
-% str = erase(str_nfiles(1).name,' - 副本')
+
 
 
 
